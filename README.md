@@ -96,6 +96,13 @@ codex mcp list
 
 Inside the Codex TUI, use `/mcp` to inspect active MCP servers.
 
+## License
+
+This repository's original documentation, prompts, scripts, and configuration
+examples are released under the MIT License. Third-party MCP projects under
+`external/mcp/` are Git submodules and remain governed by their own upstream
+licenses. See `THIRD_PARTY_NOTICES.md`.
+
 ## Image Workflows
 
 - Main image cleanup: `docs/workflow-main-image.md`, `prompts/main-image-cleanup.md`

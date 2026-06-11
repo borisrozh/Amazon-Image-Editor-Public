@@ -3,6 +3,24 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+*.log
+logs/
+
+# Secrets, local credentials, and private certificates.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.bak
+*.backup
 
 # Keep real product photos, cutouts, generated backgrounds, and exports local.
 assets/input/*
