@@ -1,0 +1,28 @@
+.venv*/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Keep real product photos, cutouts, generated backgrounds, and exports local.
+assets/input/*
+assets/product-cutouts/*
+assets/backgrounds/*
+assets/output/*
+!assets/input/.gitkeep
+!assets/product-cutouts/.gitkeep
+!assets/backgrounds/.gitkeep
+!assets/output/.gitkeep
+!assets/templates/.gitkeep
+
+# Local MCP/project config can contain machine-specific paths.
+.codex/config.toml
+
+# ImageSorcery and model caches can be large.
+config.toml
+.user_id
+mobileclip_blt.ts
+models/
+*.pt
+*.safetensors
+*.ckpt

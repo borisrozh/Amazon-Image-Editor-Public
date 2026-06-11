@@ -1,0 +1,12 @@
+[submodule "external/mcp/gimp-mcp"]
+	path = external/mcp/gimp-mcp
+	url = https://github.com/maorcc/gimp-mcp.git
+[submodule "external/mcp/imagesorcery-mcp"]
+	path = external/mcp/imagesorcery-mcp
+	url = https://github.com/sunriseapps/imagesorcery-mcp.git
+[submodule "external/mcp/inkmcp"]
+	path = external/mcp/inkmcp
+	url = https://github.com/Shriinivas/inkmcp.git
+[submodule "external/mcp/comfyui-mcp-server"]
+	path = external/mcp/comfyui-mcp-server
+	url = https://github.com/joenorton/comfyui-mcp-server.git

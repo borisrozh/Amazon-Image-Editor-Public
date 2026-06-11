@@ -1,0 +1,27 @@
+# Project-scoped Codex MCP example for Amazon Image Editor.
+# Copy to .codex/config.toml only after reviewing paths and trusting this project.
+# Do not paste secrets into this file.
+
+[mcp_servers.gimp-mcp]
+command = "powershell"
+args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/start-mcp.ps1", "-Server", "gimp"]
+cwd = "."
+startup_timeout_sec = 20
+tool_timeout_sec = 120
+
+[mcp_servers.imagesorcery-mcp]
+command = "powershell"
+args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/start-mcp.ps1", "-Server", "imagesorcery"]
+cwd = "."
+startup_timeout_sec = 20
+tool_timeout_sec = 180
+
+# Optional Phase 2 only. Requires local ComfyUI running on port 8188 and the MCP server installed.
+[mcp_servers.comfyui-mcp]
+url = "http://127.0.0.1:9000/mcp"
+enabled = false
+startup_timeout_sec = 20
+tool_timeout_sec = 300
+
+# inkmcp is intentionally not configured for native Windows.
+# Upstream currently depends on Linux D-Bus, so use WSL/Linux only after separate approval.
