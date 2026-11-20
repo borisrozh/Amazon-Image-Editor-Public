@@ -75,10 +75,14 @@ def ensure_model_descriptions() -> None:
     print(f"wrote {descriptions}")
 
 
+# Pinned to a reviewed commit so a future upstream change can't silently alter what gets installed.
+CLIP_COMMIT = "7ffa84b3bfa40c42ecc1c77147a855e69cb2dd40"
+
+
 def install_clip_package() -> None:
-    print("installing CLIP package from https://github.com/ultralytics/CLIP.git")
+    print(f"installing CLIP package from https://github.com/ultralytics/CLIP.git@{CLIP_COMMIT}")
     subprocess.run(
-        [sys.executable, "-m", "pip", "install", "git+https://github.com/ultralytics/CLIP.git"],
+        [sys.executable, "-m", "pip", "install", f"git+https://github.com/ultralytics/CLIP.git@{CLIP_COMMIT}"],
         cwd=ROOT,
         check=True,
     )

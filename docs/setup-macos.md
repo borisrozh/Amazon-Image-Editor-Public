@@ -36,7 +36,7 @@ Tools > Start MCP Server
 ```bash
 python3 -m venv .venv-imagesorcery
 ./.venv-imagesorcery/bin/python -m pip install --upgrade pip
-./.venv-imagesorcery/bin/python -m pip install imagesorcery-mcp
+./.venv-imagesorcery/bin/python -m pip install imagesorcery-mcp==0.12.0
 ```
 
 Run `imagesorcery-mcp --post-install` only after approving model downloads.

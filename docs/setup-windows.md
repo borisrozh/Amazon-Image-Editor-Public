@@ -76,8 +76,10 @@ To recreate it:
 ```powershell
 py -3.10 -m venv .venv-imagesorcery310
 .\.venv-imagesorcery310\Scripts\python.exe -m pip install --upgrade pip
-.\.venv-imagesorcery310\Scripts\python.exe -m pip install imagesorcery-mcp
+.\.venv-imagesorcery310\Scripts\python.exe -m pip install imagesorcery-mcp==0.12.0
 ```
+
+The version is pinned to match the reviewed `external/mcp/imagesorcery-mcp` submodule. Update both together.
 
 Do not run model setup until model downloads are explicitly approved:
 
