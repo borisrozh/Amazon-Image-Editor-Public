@@ -121,3 +121,10 @@ Ask before:
 - Enabling telemetry
 - Using paid APIs
 - Publishing, uploading, or externally sharing product imagery
+
+## Security Notes
+
+- **GIMP MCP port 9877 has no password.** While the GIMP MCP server is running, any program on this computer can connect to `127.0.0.1:9877` and run Python inside GIMP with your user's permissions. It only listens locally (not reachable from the internet or your network), but stop it (close GIMP or the `gimp-plugin` terminal) when you are not actively editing, and avoid running it on shared machines.
+- **Keep the AI agent on approval mode.** GIMP MCP's `call_api` tool can execute arbitrary Python. Don't let an agent auto-approve tool calls while working with untrusted images or files.
+- **Telemetry stays off** only when ImageSorcery is started through `scripts/start-mcp.*` or `scripts/run-imagesorcery-mcp.py`, which set `DISABLE_TELEMETRY=1`.
+- **Installs are pinned.** `imagesorcery-mcp` and the CLIP package are pinned to reviewed versions; update them deliberately, not by reinstalling "latest".
